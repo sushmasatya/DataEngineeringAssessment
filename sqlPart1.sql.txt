@@ -1,0 +1,97 @@
+-- =============================================================================
+-- PART 2 — MySQL schema (uses YOUR database name: sales_db)
+-- Run in MySQL Workbench: open this file → Execute (lightning icon)
+-- =============================================================================
+
+CREATE DATABASE IF NOT EXISTS sales_db;
+USE sales_db;
+
+-- Drop old tables if re-running (order matters because of foreign keys)
+DROP TABLE IF EXISTS transactions;
+DROP TABLE IF EXISTS products;
+DROP TABLE IF EXISTS customers;
+DROP TABLE IF EXISTS error_log;
+DROP TABLE IF EXISTS etl_watermark;
+
+-- TABLE 1: Customers
+CREATE TABLE customers (
+    customer_id     VARCHAR(20)  NOT NULL PRIMARY KEY,
+    customer_name   VARCHAR(200) NOT NULL,
+    email           VARCHAR(254) NOT NULL,
+    region          VARCHAR(50)  NOT NULL,
+    join_date       DATE         NOT NULL,
+    loyalty_points  INT          NOT NULL DEFAULT 0
+);
+
+-- TABLE 2: Products
+CREATE TABLE products (
+    product_id      VARCHAR(20)  NOT NULL PRIMARY KEY,
+    product_name    VARCHAR(150) NOT NULL,
+    category        VARCHAR(80)  NOT NULL,
+    price           DECIMAL(12,2) NOT NULL
+);
+
+-- TABLE 3: Transactions
+CREATE TABLE transactions (
+    transaction_id    VARCHAR(20)  NOT NULL PRIMARY KEY,
+    customer_id       VARCHAR(20)  NOT NULL,
+    product_id        VARCHAR(20)  NOT NULL,
+    quantity          INT          NOT NULL,
+    discount_pct      DECIMAL(6,4) NOT NULL DEFAULT 0,
+    total_value       DECIMAL(14,2) NOT NULL,
+    region            VARCHAR(50)  NOT NULL,
+    transaction_date  DATE         NOT NULL,
+    CONSTRAINT fk_tx_customer FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+    CONSTRAINT fk_tx_product   FOREIGN KEY (product_id)   REFERENCES products(product_id)
+);
+
+-- Error log (Part 1 + Part 3)
+CREATE TABLE error_log (
+    error_id       BIGINT AUTO_INCREMENT PRIMARY KEY,
+    source_system  VARCHAR(50)  NOT NULL,
+    source_key     VARCHAR(50),
+    error_reason   VARCHAR(500) NOT NULL,
+    logged_at      TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Incremental watermark (Part 1)
+CREATE TABLE etl_watermark (
+    pipeline_name        VARCHAR(50) PRIMARY KEY,
+    last_loaded_at       TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_transaction_id  VARCHAR(20)
+);
+
+-- INDEXES (Part 2 — performance)
+CREATE INDEX idx_tx_region      ON transactions(region);
+CREATE INDEX idx_tx_date        ON transactions(transaction_date);
+CREATE INDEX idx_tx_total_value ON transactions(total_value);
+CREATE INDEX idx_products_cat   ON products(category);
+
+SELECT 'Part 2 schema ready in sales_db' AS status;
+SHOW TABLES;
+
+
+
+USE sales_db;
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE transactions;
+TRUNCATE TABLE products;
+TRUNCATE TABLE customers;
+SET FOREIGN_KEY_CHECKS = 1;
+
+
+
+
+USE sales_db;
+SHOW TABLES;
+SELECT COUNT(*) FROM customers;
+SELECT COUNT(*) FROM products;
+SELECT COUNT(*) FROM transactions;
+
+
+
+USE sales_db;
+SELECT COUNT(*) AS customers FROM customers;
+SELECT COUNT(*) AS products FROM products;
+SELECT COUNT(*) AS transactions FROM transactions;
+SELECT * FROM etl_watermark;
