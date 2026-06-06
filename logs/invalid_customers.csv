@@ -1,0 +1,32 @@
+customer_id,customer_name,email,join_date,loyalty_points,region
+C002,,user1@example.com,invalid_date,1779.0,West
+C004,,user3@example.com,invalid_date,1892.0,North
+C005,Name with special chars !@#$%^&*(),,2024/08/28,1825.0,Unknown
+C014,Sarah Jones 13,,2022-01-24,1745.0,Unknown
+C020,,user19@example.com,2024-10-31,1333.0,North
+C022,,longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,2022-08-15,,North
+C023,John Smith 22,,2022-10-04,1220.0,
+C025,Name with special chars !@#$%^&*(),,2022-09-16T00:00:00Z,1734.0,East
+C030,,user29@example.com,,9184950.0,North
+C032,Michael Lee 31,,2022/01/14,432.0,
+C035,Alice Brown 34,,2022-01-25,1655.0,North
+C042,Alice Brown 41,,2023-11-12,,North
+C043,Michael Lee 42,,2024-06-28,448.0,East
+C044,Sarah Jones 43,,2022-05-21T00:00:00Z,1348.0,West
+C050,John Smith 49,,2022-02-23T00:00:00Z,1218.0,
+C051,,user50@example.com,2023-11-18,902.0,
+C052,,invalid_email,2023/04/01,907.0,
+C068,Alice Brown 67,,2023-05-14,9315166.0,Unknown
+C069,John Smith 68,,2023-11-20,708.0,East
+C072,Michael Lee 71,,2022-07-27,1242.0,South
+C076,Michael Lee 75,,2024/09/01,3555012.0,East
+C077,,longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,2024-01-14,1976.0,East
+C081,,,2023-04-23,1982.0,Unknown
+C082C082,,user81@example.com,2022-03-18,491.0,Unknown
+C084,,user83@example.com,2024/11/25,,North
+C089,Alice Brown 88,,2023-05-12,1085.0,Unknown
+C091,David Clark 90,,2023-10-30,6135203.0,Unknown
+C095,,user94@example.com,2023-05-26,1568.0,South
+C097,Michael Lee 96,,2024-10-13,1972.0,Unknown
+C025,Name with special chars !@#$%^&*(),,2022-09-16T00:00:00Z,1734.0,East
+C042,Alice Brown 41,,2023-11-12,,North

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/Python 3.10 (untitled4)"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/mysql-connector-j-8.4.0"/>
+	<classpathentry kind="output" path="out/production/DataEngineerAssesment_Sushma Satya"/>
+</classpath>

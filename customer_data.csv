@@ -1,0 +1,106 @@
+customer_id,customer_name,email,region,join_date,loyalty_points
+C001,John Smith 0,user0@example.com,,2024-06-20,840.0
+C002,,user1@example.com,West,invalid_date,1779.0
+C003,Alice Brown 2,user2@example.com,Unknown,2024-07-05,
+C004,,user3@example.com,North,invalid_date,1892.0
+C005,Name with special chars !@#$%^&*(),,Unknown,2024/08/28,1825.0
+C006,Alice Brown 5,user5@example.com,North,invalid_date,216.0
+C007,Name with special chars !@#$%^&*(),invalid_email,South,2024-12-31,384.0
+C008,David Clark 7,user7@example.com,South,2022-08-26,3483636.0
+C009,Alice Brown 8,user8@example.com,Unknown,2024-07-06,493.0
+C010,Alice Brown 9,longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,East,2023-01-30,150.0
+C011,Sarah Jones 10,user10@example.com,,2022-03-29,
+C012,Sarah Jones 11,user11@example.com,West,2024-06-09,1690.0
+C013,Michael Lee 12,user12@example.com,North,2022-06-18,1150.0
+C014,Sarah Jones 13,,Unknown,2022-01-24,1745.0
+C015,Alice Brown 14,user14@example.com,Unknown,2023-10-20,1204.0
+C016,Sarah Jones 15,user15@example.com,South,,8579055.0
+C017,Name with special chars !@#$%^&*(),longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,,invalid_date,510.0
+C018,David Clark 17,user17@example.com,North,2024-06-02,1685.0
+C019,David Clark 18,user18@example.com,,2024-05-29,612.0
+C020,,user19@example.com,North,2024-10-31,1333.0
+C021,Alice Brown 20,invalid_email,South,2022-09-06,202.0
+C022,,longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,North,2022-08-15,
+C023,John Smith 22,,,2022-10-04,1220.0
+C024,John Smith 23,user23@example.com,South,2023-09-03,-150.0
+C025,Name with special chars !@#$%^&*(),,East,2022-09-16T00:00:00Z,1734.0
+C026,Alice Brown 25,user25@example.com,South,2024-03-09,772.0
+C027,John Smith 26,longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,South,2022-11-18,632.0
+C028,Alice Brown 27,user27@example.com,West,,4307063.0
+,Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name ,invalid_email,,2022-02-13,
+C030,,user29@example.com,North,,9184950.0
+C031,Alice Brown 30,user30@example.com,,2024-02-09,
+C032,Michael Lee 31,,,2022/01/14,432.0
+C033,John Smith 32,user32@example.com,West,2023-01-25,532.0
+C034,Name with special chars !@#$%^&*(),invalid_email,Unknown,2022-08-24,167.0
+C035,Alice Brown 34,,North,2022-01-25,1655.0
+C036,Alice Brown 35,longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,North,2023-01-31T00:00:00Z,1152.0
+C037,Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name ,user36@example.com,Unknown,2022-07-23,123.0
+C038,Sarah Jones 37,user37@example.com,,2024-12-26,8179993.0
+C039,John Smith 38,user38@example.com,West,2023-08-03T00:00:00Z,109.0
+C040,John Smith 39,user39@example.com,Unknown,2022-08-06,885.0
+C041,Alice Brown 40,invalid_email,West,2024-08-05,1638.0
+C042,Alice Brown 41,,North,2023-11-12,
+C043,Michael Lee 42,,East,2024-06-28,448.0
+C044,Sarah Jones 43,,West,2022-05-21T00:00:00Z,1348.0
+C045,Alice Brown 44,user44@example.com,,2022-04-05,1055.0
+C046,Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name ,invalid_email,,2024-01-09,1052.0
+C047,David Clark 46,user46@example.com,West,2024-08-07,1435157.0
+C048,Michael Lee 47,longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,South,2022-08-19,83.0
+C049,David Clark 48,user48@example.com,Unknown,2022-06-03,8695647.0
+C050,John Smith 49,,,2022-02-23T00:00:00Z,1218.0
+C051,,user50@example.com,,2023-11-18,902.0
+C052,,invalid_email,,2023/04/01,907.0
+C053,Sarah Jones 52,longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,,2022-03-08,1661.0
+C054,Alice Brown 53,user53@example.com,East,2024-12-21,6907064.0
+C055,Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name ,user54@example.com,North,2022-09-02,1587.0
+C056,David Clark 55,user55@example.com,North,2023-02-17T00:00:00Z,1789.0
+C057,Sarah Jones 56,user56@example.com,West,2022-12-02T00:00:00Z,1564.0
+C058,Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name ,user57@example.com,,2024-08-10,1551.0
+C059,David Clark 58,user58@example.com,South,2023-01-18,1074.0
+C060,Sarah Jones 59,user59@example.com,West,2022/05/18,625.0
+C061,John Smith 60,user60@example.com,West,2022-07-19,3.0
+C062,John Smith 61,user61@example.com,West,2023-07-01,407.0
+C063,Alice Brown 62,user62@example.com,,2023-10-07,116.0
+C064,Alice Brown 63,user63@example.com,East,2024-04-22,24.0
+C065,Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name Very Long Name ,user64@example.com,North,2024-01-05,-830.0
+C066,Sarah Jones 65,user65@example.com,Unknown,2022-03-09,592.0
+C067,John Smith 66,user66@example.com,West,2022-06-30,1270.0
+C068,Alice Brown 67,,Unknown,2023-05-14,9315166.0
+C069,John Smith 68,,East,2023-11-20,708.0
+C070,John Smith 69,longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,Unknown,invalid_date,909.0
+C071,Michael Lee 70,user70@example.com,West,2022-09-02,
+C072,Michael Lee 71,,South,2022-07-27,1242.0
+C073,John Smith 72,user72@example.com,,2024-06-14,817.0
+C074,David Clark 73,user73@example.com,,2022-08-04,1232.0
+C075,Michael Lee 74,longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,,2022-12-10,1823.0
+C076,Michael Lee 75,,East,2024/09/01,3555012.0
+C077,,longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,East,2024-01-14,1976.0
+C078,Alice Brown 77,user77@example.com,Unknown,2023-08-13,3501111.0
+C079,David Clark 78,user78@example.com,South,2024-02-14,1624.0
+C080,David Clark 79,user79@example.com,East,2022-10-09,1395.0
+C081,,,Unknown,2023-04-23,1982.0
+C082C082,,user81@example.com,Unknown,2022-03-18,491.0
+C083,David Clark 82,user82@example.com,,,482.0
+C084,,user83@example.com,North,2024/11/25,
+C085,Michael Lee 84,user84@example.com,South,2022/04/24,-383.0
+C086,David Clark 85,user85@example.com,South,2022-12-22,1954.0
+C087,Michael Lee 86,invalid_email,Unknown,2024-03-26,1594.0
+C088,Michael Lee 87,user87@example.com,,2023-05-27,306.0
+C089,Alice Brown 88,,Unknown,2023-05-12,1085.0
+C090,John Smith 89,longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,,2024-03-03,816.0
+C091,David Clark 90,,Unknown,2023-10-30,6135203.0
+C092,Alice Brown 91,user91@example.com,South,2024-10-20,462.0
+C093,David Clark 92,user92@example.com,South,2024-03-05,-837.0
+C094C094,Alice Brown 93,user93@example.com,,2022-02-05,727.0
+C095,,user94@example.com,South,2023-05-26,1568.0
+C096,Sarah Jones 95,longemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemaillongemail@example.com,East,2023-10-08,880.0
+C097,Michael Lee 96,,Unknown,2024-10-13,1972.0
+C098,David Clark 97,user97@example.com,North,2022-04-26,1190.0
+C099,John Smith 98,user98@example.com,Unknown,2024-03-31,1060.0
+C100,Name with special chars !@#$%^&*(),user99@example.com,,2022-11-01,1609.0
+C071,Michael Lee 70,user70@example.com,West,2022-09-02,
+C025,Name with special chars !@#$%^&*(),,East,2022-09-16T00:00:00Z,1734.0
+C064,Alice Brown 63,user63@example.com,East,2024-04-22,24.0
+C042,Alice Brown 41,,North,2023-11-12,
+C062,John Smith 61,user61@example.com,West,2023-07-01,407.0
