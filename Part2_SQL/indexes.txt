@@ -1,0 +1,11 @@
+-- Index on transaction date
+CREATE INDEX idx_transaction_date
+ON transactions(transaction_date);
+
+-- Index on product id
+CREATE INDEX idx_product_id
+ON transactions(product_id);
+
+-- Index on region
+CREATE INDEX idx_region
+ON transactions(region);
