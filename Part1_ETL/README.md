@@ -2,27 +2,22 @@
 
 ## Overview
 
-This project implements an ETL (Extract, Transform, Load) pipeline using PySpark and MySQL.
-
-The pipeline extracts sales data, performs data cleansing and validation, applies business transformations, logs invalid records, and loads valid data into the target database.
+This project implements an ETL (Extract, Transform, Load) pipeline using PySpark and MySQL. The pipeline extracts sales data from JSON files, performs data cleansing and validation, logs invalid records, and loads valid data into a MySQL database.
 
 ---
 
 ## Project Structure
 
+```text
 Part1_ETL/
-
+├── README.md
 ├── firpy.py
-
 ├── sqlPart1.sql.txt
-
 ├── logs/
-
-│ └── invalid_sales.csv
-
+│   └── invalid_sales.csv
 ├── hadoop/
-
 └── lib/
+```
 
 ---
 
@@ -31,72 +26,137 @@ Part1_ETL/
 * Python
 * PySpark
 * MySQL
-* Hadoop (winutils.exe)
+* Hadoop (WinUtils)
 * MySQL JDBC Connector
 
 ---
 
-## ETL Process
+## ETL Approach
 
 ### Extract
 
-* Read source sales and customer data files.
-* Load data into PySpark DataFrames.
+The pipeline reads sales data from JSON files and loads the data into PySpark DataFrames for processing.
 
 ### Transform
 
-The following transformations are implemented in `firpy.py`:
+The following transformations are performed:
 
-* Removed duplicate records.
-* Handled null and missing values.
-* Filtered invalid records.
-* Filtered negative quantity or invalid sales values.
-* Derived calculated columns required for reporting.
-* Performed data quality validation checks.
-* Logged invalid records to `logs/invalid_sales.csv`.
+* Flattened nested JSON fields.
+* Standardized date formats.
+* Handled missing and null values.
+* Replaced null customer IDs with a default value.
+* Renamed columns for consistency.
+* Filtered and validated sales records.
+* Created separate datasets for products and transactions.
 
-### Incremental Loading
+### Data Validation
 
-Incremental loading is implemented using a watermark approach.
+Validation checks are applied to identify invalid records.
 
-* Previously processed records are identified.
-* Only new records are loaded into the target database.
-* Duplicate processing is avoided.
+Examples include:
+
+* Missing customer IDs.
+* Invalid quantity values.
+
+Invalid records are excluded from loading and written to a log file.
 
 ### Load
 
-* Valid records are loaded into MySQL database tables.
-* Invalid records are stored separately for auditing.
+Validated records are loaded into MySQL tables using the MySQL JDBC connector.
+
+The following tables are populated:
+
+* products
+* transactions
+* etl_watermark
 
 ---
 
-## Database Schema
+## Incremental Loading Logic
 
-The database schema is provided in:
+To avoid loading duplicate data, the ETL pipeline implements incremental loading based on the `transaction_id`.
 
-`sqlPart1.sql.txt`
+### Process
 
-The script creates the required database objects and tables used by the ETL pipeline.
+1. Existing transaction IDs are read from the MySQL `transactions` table.
+2. Incoming transaction records are compared with existing records.
+3. A left anti join is performed to identify records that do not already exist in the database.
+4. Only new transactions are loaded into the target table.
+
+This ensures that when the ETL process is executed multiple times, previously loaded transactions are not inserted again.
+
+### Example
+
+```python
+existing = spark.read.jdbc(
+    JDBC_URL,
+    "transactions",
+    properties=JDBC_PROPS
+).select("transaction_id")
+
+new_tx = transactions_mysql.join(
+    existing,
+    "transaction_id",
+    "left_anti"
+)
+```
+
+### Watermark Tracking
+
+After a successful load, the ETL pipeline updates the `etl_watermark` table with the current timestamp.
+
+The watermark table records:
+
+* Pipeline name
+* Last successful load time
+
+This provides a simple mechanism for monitoring ETL executions.
 
 ---
 
 ## Error Logging
 
-Invalid records generated during ETL processing are stored in:
+Invalid sales records are stored in:
 
-`logs/invalid_sales.csv`
+```text
+logs/invalid_sales.csv
+```
 
-This file captures records that fail validation checks.
+This file captures records that fail validation checks and require further review.
+
+---
+
+## Database Schema
+
+The SQL script used to create the database schema is provided in:
+
+```text
+sqlPart1.sql.txt
+```
 
 ---
 
 ## Execution
 
-Run the ETL pipeline:
+Run the ETL pipeline using:
 
 ```bash
 python firpy.py
 ```
+
+---
+
+## Screenshots of Results
+
+The following screenshots are included:
+
+1. Successful ETL execution in PySpark.
+2. Products table loaded into MySQL.
+3. Transactions table loaded into MySQL.
+4. Invalid records stored in `invalid_sales.csv`.
+5. ETL watermark table showing the latest load timestamp.
+
+---
 
 ## Deliverables
 
@@ -104,6 +164,9 @@ python firpy.py
 * SQL Schema Script (`sqlPart1.sql.txt`)
 * Invalid Data Log (`logs/invalid_sales.csv`)
 * README Documentation
+* Public GitHub Repository
+
+---
 
 ## Author
 
